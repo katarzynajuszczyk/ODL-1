@@ -1,3 +1,5 @@
+//TODO: mam wrazenie ze zamiast jednego pliku components przydadza nam sie dwa w folderze components. Jeden dla elementow zwiazanych z animacja, a drugi dla tabelek.
+
 /*ANIMATED ELEMENTS*/
 
 .animate {
@@ -53,10 +55,10 @@
       @include vendor(transform, rotate(360deg));
     }
   }
-  %animation-finish {
+  %animation-finish { 
     @include vendor(transform, translate(0, 0));
   }
-  .animate {
+  .animate { // TODO: tu warto uzyc mixinu do vendor prefixes. ten kod ponizej moglby wtedy wygladac duzo przyjemniej
     li {
       float: left;
       -webkit-transition: -webkit-transform 2s, opacity 2s;
@@ -193,7 +195,7 @@
       }
     }
 
-    #sorttable_sortrevind,
+    #sorttable_sortrevind, // TODO: skad sie wziely te id? jakos nie moglam ich znalezc. Po co one?
     #sorttable_sortfwdind {
       height: 15px;
       vertical-align: top;
