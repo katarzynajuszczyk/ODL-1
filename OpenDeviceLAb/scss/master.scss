@@ -6,9 +6,6 @@
 
 
 /*Partials*/
-// TODO: warto oddzielic pliki, ktore tworzysz od tych, ktore sa zawsze takie same. Czyli _layout.scss i _reset.scss nie powinny byc w tej samej sekcji. 
-
-
 @import 'partials/_reset.scss';
 @import 'partials/_clearfix.scss';
 @import 'partials/_base.scss';
@@ -18,5 +15,3 @@
 
 /*Media*/
 @import "partials/_print.scss";
-
-// TODO: nie uzywasz pliku _normalize.scss? jesli tak, to moze warto go usunac z repo.

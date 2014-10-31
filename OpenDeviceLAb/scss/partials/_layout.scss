@@ -1,14 +1,13 @@
-@include media-query(lap-and-up){ //TODO: warto poprawić wcięcia. Nie widać co jest zagniezdzone w media-query(lap-and-up)
-.l-float-list li, // TODO: po co bardziej zlozony selektor, skoro li mogloby dostac l-float-item ?
+
+@include media-query(lap-and-up){
+.l-float-list li,
 .l-float-item{
   float: left;
 }
-    
-// TODO: czy to konsekwentne? l-float-item floatuje do lewej, a l-float-item-right do prawej?
 .l-float-item-right{
   float: right;
 }
-.l-three-in-row{ // TODO: troche niefortunnie. .l-three-in-row jest czyms generycznym, nie powinnismy narzucac, ze moze byc stosowane tylko z li. Poza tym w srodku takiej listy, moga byc inne listy, ktorych li juz powinny miec 100%; warto poprawic.
+.l-three-in-row{
   li{
     width: 33.3%;
     padding-right: $base-spacing-unit-medium;
@@ -17,7 +16,7 @@
     padding-right: 0;
   }
 }
-.l-two-in-row{ // TODO: malo generyczne i trudno rozszerzalne. od biedy moze zostac
+.l-two-in-row{
   .l-float-item:first-child{
     width: 60%;
     padding-right: 45px;
@@ -27,10 +26,10 @@
   }
 }
 
-} //TODO: absolutnie koniecznie warto poprawic wciecia :) 
+}
 
-@include media-query(desk){ //TODO: poprawic wciecia.
-.content-wrapper.l-additional-gutter{  // TODO: a po co tutaj to parowanie klas? nie wystarczy samo .l-additional-gutter? Po co zawezac jego dzialanie?
+@include media-query(desk){
+.content-wrapper.l-additional-gutter{
   padding-left: 110px;
   padding-right: 110px;
 }

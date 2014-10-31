@@ -15,23 +15,23 @@
     padding-bottom: $base-spacing-unit-medium ;
   }
 
-  .logo{ //TODO poprawic wciecia. 
+  .logo{
     text-align: left;
     max-width: 250px;
     min-height: 52px;
     margin: 0 auto;
 
-      background: url("../img/ODL-logo.svg") no-repeat; //TODO to tlo wyglada tragicznie. sprobuj przerobic ikonke na font iconke, moze cos pomoze
+      background: url("../img/ODL-logo.svg") no-repeat;
       background-size: 50px 50px;
       padding-left: 60px;
       color: $text-color-dark;
       text-transform: uppercase;
 
       &:hover{
-        text-decoration: none; //TODO: a po co to? h1.logo nigdzie nie dostaje underline na hoverze
+        text-decoration: none;
       }
       strong{
-        font-family: 'Arial Black', Arial, no-serif; //TODO a to czasem nie bylo sans-serif?
+        font-family: 'Arial Black', Arial, no-serif;
       }
 
   }
@@ -44,7 +44,7 @@
     width: 100%;
     height: 100%;
   }
-  .button{ //button nie powinien byc zagniezdzony w headerze. to bardzo generyczny button. warto by byl niezalezny w razie gdybysmy chcieli go uzyc gdzies indziej.
+  .button{
     color: $text-color-lightest;
     background: $button-bg-color;
     font-weight: bold;
@@ -54,43 +54,43 @@
     @include vendor(transition, all 0.8s);
     &:hover{
       background: lighten($button-bg-color, 10);
+
       text-decoration: none;
     }
   }
 
 }
 
-section{ //TODO nie jestem fanka tak generycznych selektorow. a co jesli w jednej sekcji pojawi sie pozniej jeszcze jakas inna sekcja?
+section{
   padding: 100px 0;
-  .section-heading{ // TODO: nie ma powodu by ta klasa byla zagniezdzona w section. dobrze sobie powinna radzic i tego zagniezdzenia.
+  .section-heading{
     text-align: center;
     margin-bottom: $base-spacing-unit-big;
 
   }
-  .l-float-item{ // a to musi byc zagniezdzone w section? czy to jest generalna wlasciwosc .l-float-item i moze byc przeniesiona gdzies do definicji .l-float-item?
+  .l-float-item{
     margin: $base-spacing-unit-medium 0;
   }
 }
-section:nth-of-type(2n+1){ // a co jesli okaze sie ze sekcje nie sa w  zeberke, a pojawia sie trzeci wariant? nie jestem fanka tego selektora, aczkolwiek fajnie, ze wiesz jak go napisac
+section:nth-of-type(2n+1){
   background-color: $bg-color-theme-dark;
   .section-heading{
     color: $heading-color-light;
   }
 }
-section:nth-of-type(2n){ // patrz wyzej
+section:nth-of-type(2n){
   .section-heading{
     color: $heading-color-dark;
   }
 }
 
-footer{ // zbyt generalny selektor, a co jesli pojawi sie gdzies jakis article, ktory bedzie mial wlasny footer?
+footer{
   background: $additional-color-theme-dark;
   padding: 15px;
   color: $text-color-lightest;
 }
 
 /*---------------------------- Desktop & Tablet version ---------------------*/
-//TODO: nie jestem fanka takiej organizacji kodu. po to mamy tak zajebisty mixin z media query, by uzywac go tam, gdzie stylujemy dany element. dzieki temu bedziemy mieli wszystkie style dotyczace danego elementu w jednym miejscu i nie bedziemy musieli ich szukac po plikach.
 @include media-query(lap-and-up){
   .page-main-header{
    .page-main-heading{

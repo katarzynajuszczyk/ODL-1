@@ -1,5 +1,3 @@
-// TODO: nie widze dobrego powodu, by to byl oddzielny plik. zwlaszcza ze masz partial o nazwie _print.scss. Warto ograniczyc ilosc plikow css, ktore tworzymy.
-
 @media print {
   body, section, footer {
     background: #fff;
